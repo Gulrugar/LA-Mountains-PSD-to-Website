@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,900&family=Oswald:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --clr-background: 255, 255, 255;
+  --clr-accent-1: 65, 79, 107;
+  --clr-accent-2: 176, 180, 190;
+  --ff-lato: "Lato", sans-serif;
+  --ff-oswald: "Oswald", sans-serif;
+
+  --page-width: 960px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  background-color: rgb(var(--clr-background));
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.no-padding-mobile {
+  padding: 0;
+}
+
+.container > div {
+  width: 100%;
+  max-width: var(--page-width);
+}
+
+.lato__light {
+  font-family: var(--ff-lato);
+  font-weight: 300;
+}
+
+.lato__black-italic {
+  font-family: var(--ff-lato);
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.oswald__bold {
+  font-family: var(--ff-oswald);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* Header */
+
+header {
+  position: absolute;
+}
+
+header > div,
+.sticky-nav > div,
+footer > div {
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  font-size: 14px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 49px;
+}
+
+nav ul a {
+  color: rgb(var(--clr-background));
+}
+
+nav ul a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Hero section */
+
+.hero {
+  background: url(./images/backgrounds/background-1.jpg);
+  height: 425px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Sticky Nav */
+.sticky-nav {
+  height: 80px;
+  position: sticky;
+  top: 0;
+  background-color: rgb(var(--clr-background));
+  z-index: 10;
+}
+
+.sticky-nav a {
+  color: rgb(var(--clr-accent-1));
+}
+
+/* History */
+
+.history {
+  background: url(./images/backgrounds/background-2.jpg);
+  height: 709px;
+  background-size: cover;
+  background-position: center;
+}
+
+.history > div {
+  padding-top: 52px;
+}
+
+.history p {
+  font-size: 16px;
+  padding: 0 74px;
+}
+
+/* 01. HISTORY, 02. CLIMB */
+
+.section-number,
+.section-title {
+  display: inline-block;
+  color: rgb(var(--clr-accent-1));
+}
+
+.section-number {
+  font-size: 136px;
+  opacity: 0.5;
+  height: max-content;
+  line-height: 1;
+}
+
+.section-title {
+  font-size: 32px;
+  transform: translate(-32px, -28px);
+}
+
+/* Carousel */
+
+.carousel {
+  background: url(./images/carousel.jpg);
+  height: 195px;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel > div {
+  padding-top: 26px;
+}
+
+.swiper {
+  height: 168px;
+}
+
+.swiper-slide {
+  text-align: center;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(var(--clr-background));
+}
+
+/* Tabs Text */
+.tabs-text {
+  height: 180px;
+}
+
+.tabs-text > div {
+  display: flex;
+  align-items: center;
+}
+
+.tabs-text .section-title {
+  transform: translate(-28px, 18px);
+}
+
+/* Tabs */
+
+.radios {
+  display: none;
+}
+
+.checkboxes {
+  display: block;
+}
+
+.tab-content-1 {
+  background: url(./images/backgrounds/tab-1.jpg);
+}
+
+.tab-content-2 {
+  background: url(./images/backgrounds/tab-2.jpg);
+}
+
+.tab-content-1,
+.tab-content-2 {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.radios .tab-content-1,
+.radios .tab-content-2 {
+  height: 546px;
+  display: none;
+}
+
+.tabs {
+  position: relative;
+  height: auto;
+  background-color: rgb(var(--clr-accent-1));
+}
+
+.tabs input {
+  display: none;
+}
+
+.tabs input[type="radio"]:checked + label {
+  color: rgb(var(--clr-accent-1));
+  background: rgb(var(--clr-accent-2));
+}
+.tabs input[type="checkbox"]:checked + label,
+.tabs input[type="radio"]:checked + label {
+  text-decoration: underline;
+}
+
+.tabs label {
+  display: inline-block;
+  font-size: 20px;
+  text-transform: uppercase;
+  height: 40px;
+  padding: 5px 25px;
+  color: rgb(var(--clr-accent-2));
+  background: rgb(var(--clr-accent-1));
+  cursor: pointer;
+}
+
+.radios .tab-content-1,
+.radios .tab-content-2 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+input#radio-tab-1:checked ~ .tab-content-1,
+input#radio-tab-2:checked ~ .tab-content-2 {
+  display: block;
+}
+
+/* Tab Details */
+
+.tab-details {
+  margin-top: 100px;
+  margin-left: 24px;
+  padding: 20px 40px;
+  background-color: rgba(var(--clr-background), 0.7);
+  width: max-content;
+}
+
+.tab-details h2 {
+  font-size: 32px;
+  color: rgb(var(--clr-accent-1));
+  line-height: 1;
+}
+
+.tab-details ul {
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+.tab-details ul li {
+  margin: 8px 0;
+}
+
+/* Tabs Mobile Accordion */
+
+.checkboxes > div {
+  overflow: hidden;
+}
+
+.checkboxes label {
+  display: block;
+  color: rgb(var(--clr-accent-1));
+  background: rgb(var(--clr-accent-2));
+  position: relative;
+}
+
+.checkboxes label::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 18px;
+  height: 18px;
+  background: url(./images/arrow.svg);
+  transition: transform 0.3s ease;
+}
+
+.checkboxes input:checked + label::after {
+  transform: rotate(90deg);
+}
+
+.checkboxes .tab-content-1,
+.checkboxes .tab-content-2 {
+  max-height: 1px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.checkboxes input#checkbox-tab-1:checked ~ .tab-content-1,
+.checkboxes input#checkbox-tab-2:checked ~ .tab-content-2 {
+  height: 346px;
+  max-height: 346px;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+  opacity: 1;
+}
+
+/* Footer */
+
+footer {
+  height: 74px;
+  background-color: rgb(var(--clr-accent-1));
+}
+
+footer p {
+  color: #63769d;
+  font-size: 12px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 750px) {
+  .hero {
+    height: 525px;
+  }
+
+  .radios {
+    display: block;
+  }
+
+  .checkboxes {
+    display: none;
+  }
+
+  .tabs {
+    margin-bottom: 546px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .hero {
+    height: 825px;
+  }
+
+  header,
+  .sticky-nav {
+    padding: 0;
+  }
+}
