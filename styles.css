@@ -104,7 +104,7 @@ nav ul a:hover {
 /* Hero section */
 
 .hero {
-  background: url(./images/backgrounds/background-1.jpg);
+  background: url(https://user-images.githubusercontent.com/105955316/250305303-dcc69cd8-97ff-43fc-8697-53adf4605f6a.jpg);
   height: 425px;
   background-size: cover;
   background-position: center;
@@ -126,7 +126,7 @@ nav ul a:hover {
 /* History */
 
 .history {
-  background: url(./images/backgrounds/background-2.jpg);
+  background: url(https://user-images.githubusercontent.com/105955316/250305347-d739c77f-4750-47b4-a5d4-4b9286229982.jpg);
   height: 709px;
   background-size: cover;
   background-position: center;
@@ -211,11 +211,11 @@ nav ul a:hover {
 }
 
 .tab-content-1 {
-  background: url(./images/backgrounds/tab-1.jpg);
+  background: url(https://user-images.githubusercontent.com/105955316/250305378-f8c7912d-d9d8-4a14-bea6-36bad3b6a6e2.jpg);
 }
 
 .tab-content-2 {
-  background: url(./images/backgrounds/tab-2.jpg);
+  background: url(https://user-images.githubusercontent.com/105955316/250305408-e0870240-2547-439e-9b71-b4164b54d3c6.jpg);
 }
 
 .tab-content-1,
