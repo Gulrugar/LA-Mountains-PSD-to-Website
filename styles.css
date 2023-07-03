@@ -90,7 +90,7 @@ nav ul {
 }
 
 nav ul li {
-  margin-left: 49px;
+  margin-left: 30px;
 }
 
 nav ul a {
@@ -188,7 +188,7 @@ nav ul a:hover {
 
 /* Tabs Text */
 .tabs-text {
-  height: 180px;
+  height: 210px;
 }
 
 .tabs-text > div {
@@ -353,9 +353,21 @@ footer {
 footer p {
   color: #63769d;
   font-size: 12px;
+  padding-left: 20px;
 }
 
 /* Media Queries */
+
+@media screen and (min-width: 500px) {
+  nav ul li {
+    margin-left: 49px;
+  }
+
+  .tabs-text {
+    height: 180px;
+  }
+}
+
 @media screen and (min-width: 750px) {
   .hero {
     height: 525px;
